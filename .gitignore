@@ -1,0 +1,4 @@
+__pycache__/
+.venv/
+data/human_eval_citations_completed.json
+*.pyc

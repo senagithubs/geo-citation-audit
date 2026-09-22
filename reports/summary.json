@@ -1,0 +1,120 @@
+{
+  "study": "Citation presence and evidence support in ALCE human-evaluation data",
+  "analysis_date": "2026-09-22",
+  "source_commit": "246c476a4edfc564266b7346b6e29ef4861ae937",
+  "source_url": "https://raw.githubusercontent.com/princeton-nlp/ALCE/246c476a4edfc564266b7346b6e29ef4861ae937/human_eval/human_eval_citations_completed.json",
+  "source_sha256": "cfed9293752413d7c7631f36524dd4ee9ef58b209cdf9c63f6fc1e280b43cca6",
+  "inventory": {
+    "answer_records": 800,
+    "empty_answers": 22,
+    "annotated_answers": 778,
+    "configurations": 8
+  },
+  "overall": {
+    "sentences": 2604,
+    "answers": 778,
+    "questions": 200,
+    "citation_mentions": 2896,
+    "cited_sentences": 2120,
+    "human_supported_sentences": 1432,
+    "automatic_supported_sentences": 1458,
+    "unsupported_cited_sentences": 688,
+    "citation_presence_rate": 0.8141321044546851,
+    "human_support_rate": 0.5499231950844854,
+    "automatic_support_rate": 0.5599078341013825,
+    "unsupported_share_of_cited_sentences": 0.32452830188679244,
+    "automatic_human_disagreement_rate": 0.1490015360983103,
+    "automatic_precision_vs_human": 0.8580246913580247,
+    "automatic_recall_vs_human": 0.8736033519553073,
+    "confusion_matrix": {
+      "true_positive": 1251,
+      "false_positive": 207,
+      "false_negative": 181,
+      "true_negative": 965
+    }
+  },
+  "datasets": {
+    "asqa": {
+      "sentences": 811,
+      "answers": 396,
+      "questions": 100,
+      "citation_mentions": 1020,
+      "cited_sentences": 685,
+      "human_supported_sentences": 533,
+      "automatic_supported_sentences": 540,
+      "unsupported_cited_sentences": 152,
+      "citation_presence_rate": 0.8446362515413071,
+      "human_support_rate": 0.657213316892725,
+      "automatic_support_rate": 0.6658446362515413,
+      "unsupported_share_of_cited_sentences": 0.22189781021897811,
+      "automatic_human_disagreement_rate": 0.1442663378545006,
+      "automatic_precision_vs_human": 0.8851851851851852,
+      "automatic_recall_vs_human": 0.8968105065666041,
+      "confusion_matrix": {
+        "true_positive": 478,
+        "false_positive": 62,
+        "false_negative": 55,
+        "true_negative": 216
+      }
+    },
+    "eli5": {
+      "sentences": 1793,
+      "answers": 382,
+      "questions": 100,
+      "citation_mentions": 1876,
+      "cited_sentences": 1435,
+      "human_supported_sentences": 899,
+      "automatic_supported_sentences": 918,
+      "unsupported_cited_sentences": 536,
+      "citation_presence_rate": 0.800334634690463,
+      "human_support_rate": 0.5013943112102621,
+      "automatic_support_rate": 0.5119910764082544,
+      "unsupported_share_of_cited_sentences": 0.3735191637630662,
+      "automatic_human_disagreement_rate": 0.15114333519241493,
+      "automatic_precision_vs_human": 0.8420479302832244,
+      "automatic_recall_vs_human": 0.8598442714126807,
+      "confusion_matrix": {
+        "true_positive": 773,
+        "false_positive": 145,
+        "false_negative": 126,
+        "true_negative": 749
+      }
+    }
+  },
+  "bootstrap": {
+    "method": "Task-stratified question-cluster percentile bootstrap; sentence-weighted ratios",
+    "seed": 20260922,
+    "replications": 2000,
+    "confidence_level": 0.95,
+    "intervals": {
+      "citation_presence_rate": {
+        "lower": 0.7930700757575758,
+        "upper": 0.8337307684194243,
+        "valid_replications": 2000
+      },
+      "human_support_rate": {
+        "lower": 0.5204912914435074,
+        "upper": 0.5785038346972504,
+        "valid_replications": 2000
+      },
+      "automatic_human_disagreement_rate": {
+        "lower": 0.1331805056090243,
+        "upper": 0.1637115028882975,
+        "valid_replications": 2000
+      },
+      "unsupported_share_of_cited_sentences": {
+        "lower": 0.2939506704536366,
+        "upper": 0.3558124103299857,
+        "valid_replications": 2000
+      }
+    }
+  },
+  "limitations": [
+    "Secondary analysis of historical ALCE annotations; no new engine queries or human ratings.",
+    "22 empty answers are reported separately; sentence rates and answer means exclude these empty responses.",
+    "Support refers to the supplied cited passages, not independent factual truth.",
+    "Configurations vary in retrieval, document count and generation; comparisons are descriptive.",
+    "No inference of SEO uplift, present-day engine performance, German proficiency or causality.",
+    "Intervals describe variability across these questions, not annotation error or market-wide uncertainty."
+  ]
+}
